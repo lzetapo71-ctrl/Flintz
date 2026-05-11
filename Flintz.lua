@@ -49,7 +49,7 @@ local function setupDetection(hum)
 end
 
 -------------------------------------------------------------------
---// GUI CONTRASEÃ‘A
+--// GUI CONTRASEÑA
 -------------------------------------------------------------------
 local function createPasswordGui()
     local gui = Instance.new("ScreenGui", player.PlayerGui)
@@ -71,20 +71,20 @@ local function createPasswordGui()
     brandLabel.Size = UDim2.new(1, 0, 0, 24)
     brandLabel.Position = UDim2.new(0, 0, 0, 8)
     brandLabel.BackgroundTransparency = 1
-    brandLabel.Text = "âš¡ Flintz"
+    brandLabel.Text = "⚡ Flintz"
     brandLabel.TextColor3 = Color3.fromRGB(200, 60, 60)
     brandLabel.Font = Enum.Font.GothamBold
     brandLabel.TextSize = 16
 
     local title = Instance.new("TextLabel", panel)
     title.Size = UDim2.new(1, 0, 0, 30); title.Position = UDim2.new(0, 0, 0, 36)
-    title.BackgroundTransparency = 1; title.Text = "ðŸ” Ingresa la contraseÃ±a"
+    title.BackgroundTransparency = 1; title.Text = "🔐 Ingresa la contraseña"
     title.TextColor3 = Color3.fromRGB(220, 220, 220); title.Font = Enum.Font.GothamBold; title.TextSize = 13
 
     local input = Instance.new("TextBox", panel)
     input.Size = UDim2.new(0.82, 0, 0, 38); input.Position = UDim2.new(0.09, 0, 0, 72)
     input.BackgroundColor3 = Color3.fromRGB(30, 30, 30); input.TextColor3 = Color3.fromRGB(255, 255, 255)
-    input.PlaceholderText = "ContraseÃ±a..."; input.PlaceholderColor3 = Color3.fromRGB(100, 100, 100)
+    input.PlaceholderText = "Contraseña..."; input.PlaceholderColor3 = Color3.fromRGB(100, 100, 100)
     input.Text = ""; input.Font = Enum.Font.Gotham; input.TextSize = 14
     input.BorderSizePixel = 0; input.ClearTextOnFocus = false
     Instance.new("UICorner", input).CornerRadius = UDim.new(0, 8)
@@ -102,4 +102,37 @@ local function createPasswordGui()
     Instance.new("UICorner", confirmBtn).CornerRadius = UDim.new(0, 8)
 
     local function shake()
-        TweenService:Create(panel, TweenInfo.new(0.05), {Position = UDim2.new(0.5, -140,
+        TweenService:Create(panel, TweenInfo.new(0.05), {Position = UDim2.new(0.5, -140, 0.5, -100)}):Play() task.wait(0.05)
+        TweenService:Create(panel, TweenInfo.new(0.05), {Position = UDim2.new(0.5, -160, 0.5, -100)}):Play() task.wait(0.05)
+        TweenService:Create(panel, TweenInfo.new(0.05), {Position = UDim2.new(0.5, -150, 0.5, -100)}):Play()
+    end
+
+    confirmBtn.MouseButton1Click:Connect(function()
+        local typed = input.Text
+        if PASSWORDS[typed] and not usedPasswords[typed] then
+            usedPasswords[typed] = true
+            scriptUnlocked = true
+            statusLabel.TextColor3 = Color3.fromRGB(60, 200, 60)
+            statusLabel.Text = "✅ Acceso concedido"
+            task.wait(0.8)
+            TweenService:Create(panel, TweenInfo.new(0.4), {Position = UDim2.new(0.5, -150, 1.5, 0)}):Play()
+            task.wait(0.5); gui:Destroy()
+        else
+            statusLabel.TextColor3 = Color3.fromRGB(200, 60, 60)
+            statusLabel.Text = usedPasswords[typed] and "❌ Contraseña ya usada" or "❌ Contraseña incorrecta"
+            task.spawn(shake)
+        end
+    end)
+end
+
+-------------------------------------------------------------------
+--// INICIO
+-------------------------------------------------------------------
+player.CharacterAdded:Connect(function(char)
+    character = char
+    humanoid = char:WaitForChild("Humanoid")
+    setupDetection(humanoid)
+end)
+
+setupDetection(humanoid)
+createPasswordGui()
