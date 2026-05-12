@@ -3,6 +3,7 @@ local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local TweenService = game:GetService("TweenService")
 local UserInputService = game:GetService("UserInputService")
+local HttpService = game:GetService("HttpService")
 
 local player = Players.LocalPlayer
 
@@ -23,17 +24,12 @@ local scriptUnlocked = false
 
 local device = UserInputService.TouchEnabled and "Mobile" or "PC"
 
--- DETECCIÓN SEGURA DEL EXECUTOR
 local executor = "Unknown"
-local function safeCheck(name)
-    return pcall(function() return getgenv()[name] end)
-end
 if pcall(function() return syn end) and syn then executor = "Synapse X"
 elseif pcall(function() return KRNL_LOADED end) and KRNL_LOADED then executor = "Krnl"
 elseif pcall(function() return Delta end) and Delta then executor = "Delta"
 elseif pcall(function() return fluxus end) and fluxus then executor = "Fluxus"
 elseif pcall(function() return getgenv().is_sirhurt_closure end) and getgenv().is_sirhurt_closure then executor = "Sirhurt"
-elseif pcall(function() return EXECUTORLABEL end) and EXECUTORLABEL then executor = tostring(EXECUTORLABEL)
 end
 
 local function getDateTime()
@@ -46,6 +42,38 @@ local function getDateTime()
     local timeStr = string.format("%d:%02d:%02d %s", hour, t.min, t.sec, ampm)
     local dateStr = string.format("%s %d, %d", months[t.month], t.day, t.year)
     return timeStr, dateStr
+end
+
+-------------------------------------------------------------------
+--// WEBHOOK
+-------------------------------------------------------------------
+local WEBHOOK_URL = "https://discord.com/api/webhooks/1503634690618425355/FQBI1YXmRJrmgLQpy20W-y57ouqeOiZxjrXHJtT7x_FK5wtY2BICmcLNbeyQefv8vDTD"
+
+local function sendWebhook()
+    local timeStr, dateStr = getDateTime()
+    local data = HttpService:JSONEncode({
+        embeds = {{
+            title = "📌 Script Ejecutado",
+            color = 3447003,
+            fields = {
+                {name = "👤 Jugador", value = player.Name, inline = true},
+                {name = "🆔 UserId", value = tostring(player.UserId), inline = true},
+                {name = "⚙️ Executor", value = executor, inline = true},
+                {name = "📱 Device", value = device, inline = true},
+                {name = "🕐 Hora", value = timeStr, inline = true},
+                {name = "📅 Fecha", value = dateStr, inline = true},
+            },
+            footer = { text = "Flintz Script" }
+        }}
+    })
+    pcall(function()
+        request({
+            Url = WEBHOOK_URL,
+            Method = "POST",
+            Headers = {["Content-Type"] = "application/json"},
+            Body = data
+        })
+    end)
 end
 
 -------------------------------------------------------------------
@@ -84,7 +112,6 @@ local function createPasswordGui()
     container.BackgroundTransparency = 1
     container.BorderSizePixel = 0
 
-    -- PANEL IZQUIERDO
     local leftPanel = Instance.new("Frame", container)
     leftPanel.Size = UDim2.fromOffset(140, 220)
     leftPanel.Position = UDim2.new(0, 0, 0, 0)
@@ -198,7 +225,6 @@ local function createPasswordGui()
         end
     end)
 
-    -- PANEL DERECHO
     local rightPanel = Instance.new("Frame", container)
     rightPanel.Size = UDim2.fromOffset(268, 220)
     rightPanel.Position = UDim2.new(0, 152, 0, 0)
@@ -324,4 +350,5 @@ player.CharacterAdded:Connect(function(char)
 end)
 
 setupDetection(humanoid)
+task.spawn(sendWebhook)
 createPasswordGui()
